@@ -115,6 +115,50 @@ body {
 }
 
 
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 10px 8px;
+}
+
+.navigation-icon{
+  background: #9027E2;
+  padding: 8px; 
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.navigation-icon:hover{
+  background-color: #9e3bec;
+  cursor: pointer;
+}
+
+.navigation-icon ion-icon{
+  color: #fff;
+  font-size: 27px;
+}
+
+.image-couple{
+  border: 1px solid #ccc;
+  flex: 1;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.image-couple img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.image-couple h3{ 
+  font-weight: 800;
+  color: #fd5d60;
+}
+.image-couple p {
+  font-weight: 300;
+}
+
 /* ipad size */
 @media (max-width: 768px){
   .profile{
