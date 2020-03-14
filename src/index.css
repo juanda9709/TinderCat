@@ -12,7 +12,7 @@ body {
 
 .profile{
   flex: 8;
-  background: #fff;
+  background: #f1f1f1;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -22,7 +22,6 @@ body {
   flex: 16;
   background: #fff;
   min-height: 400px;
-  border: 1px solid red;
 }
 
 .about-cat{
@@ -41,7 +40,7 @@ body {
 .avatar p { 
   font-weight: 700;
   font-size: 1.2em;
-  color: #fd5d60; 
+  color: #FB4FAF; 
 }
 
 .bio-text{
@@ -73,11 +72,11 @@ body {
   text-decoration: none;
 }
 .menu ul a:hover li{
-  background-color: #f2f2f2;
+  background-color: #fff;
 }
 .menu ion-icon {
   font-size: 1.45em;
-  color: #fd5d60;
+  color: #9027E2;
   margin-right: 10px;
 }
 .menu ul li p {
@@ -145,6 +144,7 @@ body {
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  background: #f1f1f1;
 }
 .image-couple img {
   width: 100%;
@@ -153,10 +153,35 @@ body {
 }
 .image-couple h3{ 
   font-weight: 800;
-  color: #fd5d60;
+  color: #FB4FAF;
 }
 .image-couple p {
   font-weight: 300;
+}
+
+
+.reactions{
+  display: flex;
+  justify-content: center;
+}
+
+.reaction-icon{
+  padding: 20px;
+  border-radius: 50%;
+  margin: 15px 15px;
+}
+.reaction-icon ion-icon{
+  font-size: 28px;
+  color: #fff;
+}
+
+.reaction-icon:hover{
+  background-color: #fff;
+  cursor: pointer;
+} 
+.reaction-icon ion-icon:hover{
+  color: #9027E2;
+  cursor: pointer;
 }
 
 /* ipad size */
