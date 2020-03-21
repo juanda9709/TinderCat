@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import { Home } from './Home'
 import { Login } from './Login'
-import { Singup } from './Signup'
+import { Signup } from './Signup'
 
 export const Routers = () => (
     <Router>
@@ -14,11 +14,9 @@ export const Routers = () => (
             <Route exact path='/'>
                 <Home />
             </Route>
-            <Route path='/login'>
-                <Login />
-            </Route>
+            <Route path='/login' component={ Login } />
             <Route path='/signup'>
-                <Singup />
+                <Signup />
             </Route>
         </Switch>
     </Router>
