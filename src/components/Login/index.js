@@ -1,5 +1,8 @@
 import React from 'react'
 import Logo from '../../static/logo-login.png'
+import {
+    Link
+} from 'react-router-dom'
 
 export const Login = () => (
     <div className="login">
@@ -14,12 +17,17 @@ export const Login = () => (
                 <input type="password" />
             </div>
             <br />
-            <div className="button-primary">
-                <input type="button" value="Login" />
-            </div>
+            <Link to="/">
+                <div className="button-primary">
+                    <input type="button" value="Login" />
+                </div>
+            </Link>
             <br />
             <p className="signup-link">
-                ¿Not member yet? <a href="#">Signup</a>
+                ¿Not member yet?
+                    <Link to="/signup">
+                        Signup
+                    </Link>
             </p>
         </form>
     </div>
