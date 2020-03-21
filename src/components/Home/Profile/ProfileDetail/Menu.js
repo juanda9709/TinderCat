@@ -21,6 +21,12 @@ export const Menu = () => (
                     <p>Help</p>
                 </li>
             </a>
+            <a href="#">
+                <li>
+                    <ion-icon name="log-out"></ion-icon>
+                    <p>Close session</p>
+                </li>
+            </a>
         </ul>
     </nav>
 )
