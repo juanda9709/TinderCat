@@ -1,27 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Logo from '../../static/logo-login.png'
 import {
     Link
 } from 'react-router-dom'
 
-export const Login = () => (
+export const Login = () => {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const loginHandler = () => {
+            console.log ('email' , email)
+            console.log ('password' , password)
+
+    }
+    return (
     <div className="login">
         <form>
             <img src={Logo} />
             <div className="input-custom">
                 <label>Email address</label>
-                <input type="email" />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="input-custom">
                 <label>Password</label>
-                <input type="password" />
+                <input type="password" value={password} onChange={(p) => setPassword(p.target.value)} />
             </div>
             <br />
-            <Link to="/">
+          
                 <div className="button-primary">
-                    <input type="button" value="Login" />
+                    <input onClick = {loginHandler}  type="button" value="Login" />
                 </div>
-            </Link>
+            
             <br />
             <p className="signup-link">
                 ¿Not member yet?
@@ -32,3 +41,5 @@ export const Login = () => (
         </form>
     </div>
 )
+
+}

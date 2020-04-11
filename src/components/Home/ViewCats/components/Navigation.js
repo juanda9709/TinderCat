@@ -1,19 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { NavigationIcon } from './Navigation-icon'
 import { Couple } from './Couple'
+import {CAT_LIST} from '../../../../data/db'
 
-export const Navigation = () => (
-    <div className="navigation">
-        <div>
-            <NavigationIcon name="arrow-undo" />
-        </div>
+export const Navigation = () => {
+    
+    const [indexCat, setIndexCat] =useState(0)
+    const [cat, setCat] = useState({}) //useState para inicializar la variable cat -- useCat para modificar variable cat
+    
+    const goBack = () => {
+        console.log('go back...')
+        
+        let newIndex= indexCat == 0 ? CAT_LIST.length -1 : indexCat -1 
+   
+        setIndexCat ( newIndex )
+       // setCat(CAT_LIST[newIndex]) 
+    }
+
+    const goNext = () => {
+        console.log('go next...')
+        let newIndex= indexCat == (CAT_LIST.length -1) ? 0 : indexCat +1 
+        setIndexCat ( newIndex)
+        //setCat(CAT_LIST[newIndex])
+    }
+
+    useEffect( () => {
+        setCat(CAT_LIST[indexCat])
+
+    }, [indexCat])
+    
+    return (
+        <div className="navigation">
+        <NavigationIcon onPress={goBack} name="arrow-undo" />
         <Couple
-            image="https://www.hola.com/imagenes/estar-bien/20180926130368/como-saber-si-mi-gata-esta-en-celo/0-603-746/como-saber-si-mi-gata-esta-en-celo-ok-t.jpg"
-            username="@princess"
-            description="Soy tierna, me gusta cazar pajaros y comer galletas de la suerte. Da like para que salgamos a cazar!"
+            image={cat.image}
+            username={cat.username}
+            description={cat.description}
         />
-        <div>
-            <NavigationIcon name="arrow-redo" />
-        </div>
+        <NavigationIcon onPress={goNext} name="arrow-redo" />
+        
     </div>
-)
+    )
+}
+
+

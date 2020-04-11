@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Bio = () => (
     <p className="bio-text">
-        Me gusta la playa, la arena y salir con algunas gatunas
+        Me gustan las bolsas plasticas y morder los pies de mis humanos
     </p>
 )

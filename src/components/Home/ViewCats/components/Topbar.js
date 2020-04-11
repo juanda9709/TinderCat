@@ -1,22 +1,40 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Logo from '../../../../static/logo-color.svg'
 import { TopbarIcon } from './Topbar-icon'
+import { ProfileContext } from '../../../../Contexts/ProfileContext'
+import { AboutCatContext } from '../../../../Contexts/AboutCatContext'
 
 const logoStyle = {
     flex: 1,
     textAlign: 'center'
 }
 
-export const Topbar = () => (
+export const Topbar = () => {
+
+    const { profilePanel, setProfilePanel} = useContext(ProfileContext)
+    const { aboutcatPanel, setaboutcatPanel} = useContext(AboutCatContext)
+ 
+    const profilePanelHandler = () => {
+        setProfilePanel(!profilePanel)
+    }
+
+    const aboutcatPanelHandler = () => {
+        setaboutcatPanel(!aboutcatPanel)
+    }
+    return(
     <div className="topbar">
-        <div>
-            <TopbarIcon name="menu-outline" />
+
+        <div className ="show-mobile">
+        <TopbarIcon onPress={profilePanelHandler} name="menu-sharp" />
         </div>
         <div style={ logoStyle }>
             <img width="200" src={ Logo } />
         </div>
-        <div>
-            <TopbarIcon badge="6" name="notifications-outline" />
+        <div className ="show-mobile">
+        <TopbarIcon onPress={aboutcatPanelHandler} name="apps" />
         </div>
+        <TopbarIcon badge="6" name="notifications" />
+
     </div>
 )
+}

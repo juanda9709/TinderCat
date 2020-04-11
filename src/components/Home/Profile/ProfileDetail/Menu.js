@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+    Link
+} from 'react-router-dom'
 
 export const Menu = () => (
     <nav className="menu">
@@ -21,12 +24,12 @@ export const Menu = () => (
                     <p>Help</p>
                 </li>
             </a>
-            <a href="#">
+            <Link to="/login">
                 <li>
                     <ion-icon name="log-out"></ion-icon>
                     <p>Close session</p>
                 </li>
-            </a>
+                </Link>
         </ul>
     </nav>
 )
