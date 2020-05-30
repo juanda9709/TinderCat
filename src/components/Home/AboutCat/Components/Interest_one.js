@@ -5,8 +5,7 @@ const fillStyle ={
         background: '#07ABA0',
         border:  '#05635d',
         color: '#fff'
-           
-
+ 
 }
 
 export const InterestOne =({name = '...' , status = false }) => (

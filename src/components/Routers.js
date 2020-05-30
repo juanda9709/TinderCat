@@ -11,13 +11,13 @@ import { Signup } from './Signup'
 export const Routers = () => (
     <Router>
         <Switch>
-            <Route exact path='/'>
-                <Home />
-            </Route>
-            <Route path='/login' component={ Login } />
-            <Route path='/signup'>
-                <Signup />
-            </Route>
+
+        <Route exact path='/' component = { Home } />
+
+        <Route path='/login' component={ Login } />
+        
+        <Route path='/signup' component = { Signup }/>
+                
         </Switch>
     </Router>
 )
