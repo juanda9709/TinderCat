@@ -1,15 +1,17 @@
 import React, {useState} from 'react'
 import Logo from '../../static/zona-gato.png'
 import Titulo from '../../static/titulo.jpg'
-import axios from 'axios' 
+
 import swal from 'sweetalert'
 import {useHistory}  from 'react-router-dom'
+import { requestHttp } from '../../config/http-server'
+import { HTTP_CONSTANTS } from '../../config/http-constants'
 
 export const Signup = (props) => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [nickname, setNickname] = useState('')
+    const [nickname, setNickname] = useState('')                         
     const [password, setPassword] = useState('')
     const [gender, setGender] = useState('')
     const [birthday, setBirthday] = useState('')
@@ -49,8 +51,11 @@ export const Signup = (props) => {
 
     const signupRequest = async (data) => {
         try {
-            const response = await axios.post('http://localhost:5001/cats/signup', data)
-            if (response.data.status === 1) {
+            const endpoint = HTTP_CONSTANTS.register
+            const response = await requestHttp('post', endpoint, data)
+            
+            
+            if (response.status === 1) {
                 swal('Great!', 'Yoy are now in TinderCat', 'success')
                 .then(value => {
                     redirectLogin()
@@ -59,7 +64,7 @@ export const Signup = (props) => {
                 swal('Error!', 'Try later please', 'warning')
             }
         } catch (err) {
-            swal('Error!', 'Try later please', 'warning')
+            swal('Error!', 'Try pipi please', 'warning')
         }
     }
   

@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Topbar } from './components/Topbar'
 import { Navigation } from './components/Navigation'
 import { Reactions } from './components/Reactions'
 
-export const ViewCats = () => (
-    <div className="view-cats">
+export const ViewCats = () => {
+    
+    const [actualCat,setActualCat] = useState({})
+
+    
+
+    const refreshActualCat = (idCat) => {
+        setActualCat(idCat)
+    }
+    
+    const notifyChange = () => {
+        console.log('Estoy notificando')
+        setActualCat({})
+        window.location.href = '/'
+    }
+    
+    return(<div className="view-cats">
         <Topbar />
-        <Navigation />
-        <Reactions />
-    </div>
-)
+        <Navigation onPress = {refreshActualCat} />
+        <Reactions cat = {actualCat} changeCat = {notifyChange} />
+    </div>)
+}

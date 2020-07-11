@@ -8,6 +8,8 @@ body {
 
 .home-page {
   display: flex;
+  
+  
 }
 
 .profile{
@@ -18,7 +20,7 @@ body {
   flex-direction: column;
   /*padding: 10px;*/
   
-  overflow: scroll;
+  /*overflow: scroll;*/
   z-index: 1000;
 }
 
@@ -26,9 +28,10 @@ body {
   
   /*flex: 16;*/
   flex-grow: 2;
-  
+  display: flex;
+  flex-direction: column;
   background: #fff;
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .about-cat{
@@ -36,6 +39,7 @@ body {
   flex-grow: 1;
   flex-direction: column;
   /*flex: 9 */
+  overflow: scroll;
   
    
   background: rgb(224, 197, 241);
@@ -157,6 +161,11 @@ body {
 .image-couple{
   border: 1px solid #ccc;
   flex: 1;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-top-left-radius: 10px;
@@ -165,15 +174,23 @@ body {
 }
 .image-couple img {
   width: 100%;
+  height: 65%;
+  flex-grow: 2;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  margin-bottom: 0px;
 }
 .image-couple h3{ 
   font-weight: 800;
   color: rgb(145, 95, 30);
+  flex-grow: 1 ;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 .image-couple p {
   font-weight: 300;
+  flex-grow: 1 ;
+  margin-top: 0px;
 }
 
 
@@ -186,7 +203,7 @@ body {
 .reaction-icon{
   padding: 20px;
   border-radius: 50%;
-  margin: 15px 15px;
+  margin: 25px 25px;
   opacity: 0.8;
 }
 .reaction-icon ion-icon{
@@ -198,6 +215,7 @@ body {
   cursor: pointer;
   opacity: 1;
 }
+
 
 .show-mobile{
   display: none;
@@ -347,7 +365,7 @@ body {
 
  .preferences-container h3{
 
-  font-weight: 300;
+  font-weight: 700;
   text-align: center;
   color: rgb(77, 14, 126);
   margin: 8px 0px;
@@ -356,8 +374,8 @@ body {
  }
 
  .preferences-container hr{
-  font-weight: 300;
-  border-color: rgb(180, 180, 180);
+  font-weight: 50;
+  border-color: rgb(193, 72, 223);
  }
 
  .preferences-age {
@@ -375,25 +393,80 @@ body {
 
 .interest-container h3{
 
-  font-weight: 300;
+  font-weight: 700;
   text-align: center;
   color: rgb(77, 14, 126);
   margin: 8px 0px;
  }
 
  .interest-container hr{
-  font-weight: 300;
-  border-color: rgb(180, 180, 180);
+  font-weight: 10;
+  border-color: rgb(193, 72, 223);
  }
 
- .interest-container .Interest-one {
-   border: 1px solid #000000;
-   background-color: #fff;
-   padding: 6px 10px;
-   font-weight: 500;
-   margin: 5px;
- }
+ 
  .interest-container .Interest-box {
    display: flex; 
    flex-wrap: wrap;
  }
+
+ .Interest-one:hover {
+  cursor: pointer;
+  
+}
+
+.Interest-one  {
+  border: none;
+  
+  background-color: #fff;
+  padding: 6px 10px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.loveds h3{
+
+  font-weight: 700;
+  text-align: center;
+  color: rgb(77, 14, 126);
+  margin: 8px 0px;
+  font-family: 'Lato';
+  
+}
+.loveds hr{
+  font-weight: 100;
+  border-color: rgb(193, 72, 223);
+
+ }
+
+ .loveds{
+   text-align: center;
+ }
+
+
+ .loveds .avatar{
+   margin: 10px 10px;
+   float: left;
+   
+   
+
+ }
+ .loveds .avatar img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0px;
+ 
+  
+}
+
+.loveds .avatar p { 
+  font-weight: 700;
+  font-size: 0.8em;
+  color: rgb(37, 172, 154); 
+  margin-top: 0px;
+
+ 
+  
+}

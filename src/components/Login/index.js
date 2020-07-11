@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import Logo from '../../static/logo-login.png'
-import axios from 'axios'
 import swal from 'sweetalert'
 import {
     useHistory, Link
 } from 'react-router-dom'
+import { HTTP_CONSTANTS } from './../../config/http-constants'
+import { requestHttp } from './../../config/http-server'
 
 export const Login = (props) => {
 
@@ -12,26 +13,6 @@ export const Login = (props) => {
     const [password, setPassword] = useState('')
     const history = useHistory()
 
-    const onSubmitHandler = (e) => {
-        e.preventDefault()
-        const data = LoginCatData()
-        LoginRequest(data) 
-    }
-    const LoginRequest = async (data) => {
-        try {
-            const response = await axios.get('http://localhost:5001/cats/login' , {params: data})            
-            if (response.data.status === 1) {
-                    redirectHome()
-                }
-            else {
-                swal('Error!', 'Wrong Email/Password', 'warning')
-            } 
-        }
-            catch (err) {
-            swal('Error!', 'Wrong Email/Password', 'warning')
-        }
-    }
-    
     const LoginCatData = () => {
         const data = {
            email,
@@ -40,6 +21,31 @@ export const Login = (props) => {
         return data 
     }
 
+    const onSubmitHandler = (e) => {
+        e.preventDefault()
+        const data = LoginCatData()
+        LoginRequest(data) 
+    }
+    const LoginRequest = async (data) => {
+        try {
+
+            const endpoint = HTTP_CONSTANTS.login
+            const response = await requestHttp('get', endpoint, {}, data)
+           // const response = await axios.get('http://localhost:5001/cats/login' , {params: data})    
+                  
+            if (response.status === 1) {
+                    sessionStorage.setItem('_TOKEN_', response.token)
+                    redirectHome()
+                }
+            else {
+                swal('Error!', 'Wrong Email/Password', 'warning')
+            } 
+        }
+            catch (err) {
+            swal('Error!', 'Wrong', 'warning')
+        }
+    }
+       
     const redirectHome = () => {
         history.push('/')
     }
