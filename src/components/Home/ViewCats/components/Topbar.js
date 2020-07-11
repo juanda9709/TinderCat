@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Logo from '../../../../static/logo-color.svg'
+import Logo from '../../../../static/logo-color.png'
 import { TopbarIcon } from './Topbar-icon'
 import { ProfileContext } from '../../../../Contexts/ProfileContext'
 import { AboutCatContext } from '../../../../Contexts/AboutCatContext'

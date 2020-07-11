@@ -16,7 +16,7 @@ export const Reactions = ({cat , changeCat}) => {
             }
             const response = await requestHttp('post', endpoint, bodyData)
             const {status} = response
-            console.log(bodyData, response, cat._id )
+           
         } catch (err) {
             console.error(err)
         }}
@@ -34,7 +34,7 @@ export const Reactions = ({cat , changeCat}) => {
             }
             const response = await requestHttp('post', endpoint, bodyData)
             const {status} = response
-            console.log(bodyData, response, cat._id )
+            
         } catch (err) {
             console.error(err)
         }}
@@ -44,7 +44,7 @@ export const Reactions = ({cat , changeCat}) => {
     return(
     <div className="reactions">
         <ReactionIcon name="heart-dislike" interactionClick={unlikedCat}/>
-        <ReactionIcon color="#C800AA" name="heart" interactionClick={likedCat} />
+        <ReactionIcon color="#4dff4d" name="heart" interactionClick={likedCat} />
     </div>
     )
 }

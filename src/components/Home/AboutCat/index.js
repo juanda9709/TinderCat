@@ -65,36 +65,6 @@ export const AboutCat = ({ interest, preferences, noty }) => {
         }
         
     }
-/*
-    const interestChange = async (interestId, status) => {
-        try {            
-            if(!status){
-
-                const data = {interestId: interestId}
-                const endpoint = HTTP_CONSTANTS.addinterest      
-                const response = await requestHttp('post', endpoint, data)
-                const {cat} = response
-                setInterestUpdated(cat.interests)
-                console.log(interestUpdated)
-
-            } else {
-                const data = {interestId: interestId}
-                const endpoint = HTTP_CONSTANTS.removeinterest     
-                const response = await requestHttp('delete', endpoint, data)
-                
-                const {cat} = response
-                setInterestUpdated(cat.interests)
-                console.log(interestUpdated)
-
-
-            }
-           console.log(status)
-            }
-             catch (err) {
-            console.error('Error: ', err)        
-            }
-
-    }*/
 
     const notificar =() =>{
         noty()

@@ -14,7 +14,7 @@ export const ViewCats = () => {
     }
     
     const notifyChange = () => {
-        console.log('Estoy notificando')
+        
         setActualCat({})
         window.location.href = '/'
     }

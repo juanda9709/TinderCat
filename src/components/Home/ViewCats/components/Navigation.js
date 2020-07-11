@@ -17,8 +17,7 @@ export const Navigation = ({onPress}) => {
             const endpoint = HTTP_CONSTANTS.catlist
             const response = await requestHttp('get', endpoint)
             const { status, avaibleCats } = response
-            console.log('respose:',response)
-            console.log(avaibleCats)
+            
             setCatsList(avaibleCats)    
             setIndexCat(0)     
                       
@@ -74,8 +73,8 @@ export const Navigation = ({onPress}) => {
         <NavigationIcon onPress={goBack} name="arrow-undo" />
        { !Object.keys(cat).length ? <div className="image-couple">
         
-        <h3>NO FUERON ENCONTRADOS LOS GATOS</h3>
-        <p>MODIFICAR INTERESES</p>
+        <h3>NO HAY GATOS DISPONIBLES :(</h3>
+        <p>INTENTA MODIFICAR TUS INTERESES</p>
         </div> :  <Couple
             image={cat.image}
             username={cat.nick}

@@ -25,7 +25,7 @@ export const Loved = ({ love }) => {
     }, [])
 
     return(
-        <div className="loveds">
+        <div className="loveds"> <br/>
         <hr/> <h3> They love me! </h3> <hr/> <br/>
             {  
         catsLoved.map( (item, key) => <Avatar key = {key} image = {item.image} nick = {item.nick} /> )

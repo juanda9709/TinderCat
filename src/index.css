@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: 'Lato', Helvetica, sans-serif;
+  background-color: #ffffff;
 }
 
 
@@ -15,9 +16,10 @@ body {
 .profile{
   /*flex: 8;*/
   flex-grow: 1;
-  background: #fff8b8;
+  background: #fa7a47;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
   /*padding: 10px;*/
   
   /*overflow: scroll;*/
@@ -30,7 +32,7 @@ body {
   flex-grow: 2;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: #ffffff ;
   min-height: 600px;
 }
 
@@ -40,9 +42,10 @@ body {
   flex-direction: column;
   /*flex: 9 */
   overflow: scroll;
+  border-radius: 10px;
   
    
-  background: rgb(224, 197, 241);
+  background-color: #fa7a47;
   
   z-index: 1000;
 }
@@ -54,11 +57,14 @@ body {
   height: 180px;
   border-radius: 50%;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 .avatar p { 
   font-weight: 700;
   font-size: 1.2em;
-  color: rgb(37, 172, 154); 
+  color:#2f2e33; 
+  margin-top: 0px;
 }
 
 .bio-text{
@@ -88,11 +94,11 @@ body {
   text-decoration: none;
 }
 .menu ul a:hover li{
-  background-color: #fff;
+  background-color: #4dff4d;
 }
 .menu ion-icon {
   font-size: 1.45em;
-  color: rgb(33, 163, 146);
+  color: #2f2e33;
   margin: 0 10px;
 }
 .menu ul li p {
@@ -106,16 +112,19 @@ body {
   padding: 0 10px;
   /*border-bottom: 1px solid #ccc;*/
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: #2f2e33;
+  border-radius: 10px;
+  margin: 5px 5px;
 }
 
 .topbar-icon:hover ion-icon{
-  color: #07ABA0;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .topbar-icon ion-icon{
   font-size: 1.8em;
-  color: #888;
+  color:  #4dff4d;
 }
 
 .topbar-icon span{
@@ -135,11 +144,11 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 8px;
-  background:rgb(208, 244, 245) ;
+  background:#ffffff  ;
 }
 
 .navigation-icon{
-  background: #9027E2;
+  background: #4dff4d;
   padding: 8px; 
   border-radius: 50%;
   margin: 0 10px;
@@ -149,7 +158,7 @@ body {
 }
 
 .navigation-icon:hover{
-  background-color: #9e3bec;
+  background-color: #4dff7F ;
   cursor: pointer;
 }
 
@@ -170,7 +179,7 @@ body {
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: #f1f1f1;
+  background: #2f2e33;
 }
 .image-couple img {
   width: 100%;
@@ -182,7 +191,7 @@ body {
 }
 .image-couple h3{ 
   font-weight: 800;
-  color: rgb(145, 95, 30);
+  color: #4dff4d;
   flex-grow: 1 ;
   margin-top: 5px;
   margin-bottom: 0px;
@@ -191,13 +200,14 @@ body {
   font-weight: 300;
   flex-grow: 1 ;
   margin-top: 0px;
+  color: white;
 }
 
 
 .reactions{
   display: flex;
   justify-content: center;
-  background:rgb(208, 244, 245) ;
+  background: #ffffff ;
 }
 
 .reaction-icon{
@@ -296,7 +306,7 @@ body {
 .button-primary input {
   cursor: pointer;
   font-size: 1.15em;
-  background: #07ABA0;
+  background: #4dff4d;
   color: #fff;
   padding: 6px 85px;
   font-family: 'Lato';
@@ -367,7 +377,7 @@ body {
 
   font-weight: 700;
   text-align: center;
-  color: rgb(77, 14, 126);
+  color: #2f2e33;
   margin: 8px 0px;
   font-family: 'Lato';
   
@@ -375,7 +385,7 @@ body {
 
  .preferences-container hr{
   font-weight: 50;
-  border-color: rgb(193, 72, 223);
+  border-color: #2f2e33;
  }
 
  .preferences-age {
@@ -395,13 +405,13 @@ body {
 
   font-weight: 700;
   text-align: center;
-  color: rgb(77, 14, 126);
+  color: #2f2e33;
   margin: 8px 0px;
  }
 
  .interest-container hr{
   font-weight: 10;
-  border-color: rgb(193, 72, 223);
+  border-color: #2f2e33;
  }
 
  
@@ -428,14 +438,14 @@ body {
 
   font-weight: 700;
   text-align: center;
-  color: rgb(77, 14, 126);
+  color: #2f2e33;
   margin: 8px 0px;
   font-family: 'Lato';
   
 }
 .loveds hr{
   font-weight: 100;
-  border-color: rgb(193, 72, 223);
+  border-color: #2f2e33;
 
  }
 
@@ -464,7 +474,7 @@ body {
 .loveds .avatar p { 
   font-weight: 700;
   font-size: 0.8em;
-  color: rgb(37, 172, 154); 
+  color: #2f2e33; 
   margin-top: 0px;
 
  

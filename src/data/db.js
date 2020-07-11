@@ -9,8 +9,7 @@ export const GetAvaibleCats = async () => {
         const endpoint = HTTP_CONSTANTS.catlist
         const response = await requestHttp('get', endpoint)
         const { status, avaibleCats } = response
-        console.log(response)
-        console.log(avaibleCats)
+        
         return{avaibleCats}    
          
               
